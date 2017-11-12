@@ -26,10 +26,47 @@ function myTry() {
 
 	var code = document.getElementById("editor").value;
 
+//strong
 	var code = code.replace("<fuerte>", "<strong>");
 	var code = code.replace("</fuerte>", "</strong>");
+//title
+	var code = code.replace("<titulo>", "<title>");
+	var code = code.replace("</titulo>", "</title>");
+	var code = code.replace("<título", "<title>");
+	var code = code.replace("</título>", "</title>");
+//head
+	var code = code.replace("<com>", "<head>");
+	var code = code.replace("</com>", "</head>");
+//article
+	var code = code.replace("<artículo>", "<article>");
+	var code = code.replace("</artículo>", "</article>");
+	var code = code.replace("<articulo>", "<article>");
+	var code = code.replace("</articulo>", "</article>");
+//button
+	var code = code.replace("<botón>", "<button>");
+	var code = code.replace("</botón>", "</button>");
+	var code = code.replace("<boton>", "<button>");
+	var code = code.replace("</boton>", "</button>");
+//br
+	var code = code.replace("<int>", "<br>");
+	var code = code.replace("</int>", "</br>");
+//caption
+	var code = code.replace("<subtítulo>", "<caption>");
+	var code = code.replace("</subtítulo>", "</caption>");
+	var code = code.replace("<subtitulo>", "<caption>");
+	var code = code.replace("</subtitulo>", "</caption>");
+//em
+	var code = code.replace("<én>", "<em>");
+	var code = code.replace("</én>", "</em>");
+	var code = code.replace("<en>", "<em>");
+	var code = code.replace("</en>", "</em>");
 
-	
+
+
+
+
+
+
 
 	document.getElementById("browser").innerHTML = code;
 
