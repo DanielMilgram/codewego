@@ -1,0 +1,80 @@
+<html>
+<body>
+
+
+<div class="main">
+	<div class="header"></div>
+	<div class="menu">
+		<input type="button" value="run" onclick="myTry()">
+	</div>
+	<div class="content">
+		<div id="browser"></div>
+		<textarea id="editor"></textarea>
+		
+	</div>
+</div>
+
+</body>
+	
+</html>
+
+<script type="text/javascript">
+function myTry() {
+
+
+
+
+	var code = document.getElementById("editor").value;
+
+	var code = code.replace("<fuerte>", "<strong>");
+	var code = code.replace("</fuerte>", "</strong>");
+
+	
+
+	document.getElementById("browser").innerHTML = code;
+
+
+}
+
+	
+</script>
+
+<style>
+body {
+	margin:0;
+	
+}
+
+.header {
+		height:80px;
+	}
+.menu {
+	height:80px;
+	background:gold;
+}
+
+#browser {
+	width: 55%;
+	border: 1px solid black;
+	float:right;
+	height: 400px;
+}
+
+#editor {
+	width: 40%;
+	border: 1px solid black;
+	float:left;
+	height: 400px;
+	resize:none;
+}
+.content {
+	height:400px;
+}
+.menu input[type=button] {
+	margin-left: 200px;
+	width: 120px;
+	height: 40px;
+}
+
+
+</style>
