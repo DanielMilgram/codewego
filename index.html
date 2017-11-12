@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code We Go</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <link rel="stylesheet" href="custom.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<script>
+	jQuery(document).ready(function() {
+			        
+		jQuery('.carousel[data-type="multi"] .item').each(function(){
+			var next = jQuery(this).next();
+			if (!next.length) {
+				next = jQuery(this).siblings(':first');
+			}
+			next.children(':first-child').clone().appendTo(jQuery(this));
+				  
+			for (var i=0;i<2;i++) {
+				next=next.next();
+				if (!next.length) {
+					next = jQuery(this).siblings(':first');
+				}
+				next.children(':first-child').clone().appendTo($(this));
+			}
+		});
+			        
+	});
+</script>
+<div class="container">
+	<div class="row">
+		<div class="col-md-11 text-right">Sign Up</div>
+		<div class="col-md-1 text-right">Login</div>
+	</div>
+	<div class="row">
+		<h1 class="text-center heading col-md-12 text-uppercase">code<span class="orange">we</span>go</h1>
+		<h3 class="subheading text-center">Empower. Engage. Educate.</h3>
+	</div>
+	<div class="carousel slide row" data-ride="carousel"  data-interval="5500" id="animalscarousel">
+		<div class="carousel-inner">
+			<div class="item active">
+				<div class="col-md-4"></div>
+				<div class="col-md-4 text-center">
+					<a href="http://www.google.com"><img src="images/pom.svg" class="img-responsive"></a>
+				</div>
+				<div class="col-md-4"></div>
+			</div>
+			<div class="item">
+				<div class="col-md-4"></div>
+			    <div class="col-md-4 text-center"><a href="http://www.google.com"><img src="images/penguin.svg" class="img-responsive"></a></div>
+			    <div class="col-md-4"></div>
+			</div>
+			<div class="item">
+				<div class="col-md-4"></div>
+			    <div class="col-md-4 text-center"><a href="http://www.google.com"><img src="images/happy.svg" class="img-responsive"></a></div>
+			    <div class="col-md-4"></div>
+			</div>
+			<div class="item">
+				<div class="col-md-4"></div>
+			    <div class="col-md-4 text-center"><a href="http://www.google.com"><img src="images/sad.svg" class="img-responsive"></a></div>
+			    <div class="col-md-4"></div>
+			</div>
+		</div>
+		<a class="left carousel-control" href="#animalscarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+		<a class="right carousel-control" href="#animalscarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>  
+	</div>
+	<div class="row links">
+		<div class="col-md-3"></div>
+		<div class="col-md-3 text-center"><a href="">Sandbox</a></div>
+		<div class="col-md-3 text-center"><a href="">Tutorial</a></div>
+		<div class="col-md-3"></div>
+	</div>
+</div>
+</body>
+</html>
